@@ -1,0 +1,16 @@
+
+.container{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+background-color: rgb(179, 166, 56);
+font-size: 30px;
+color: rgb(12, 12, 12);
+font-weight: bold;
+}
+#title{
+  font-size: 50px;
+  text-decoration: underline;
+  text-shadow:2px 2px 5px rgb(51, 18, 18) ;
+  text-align: center;
+}

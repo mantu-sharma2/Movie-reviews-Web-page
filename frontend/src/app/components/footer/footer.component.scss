@@ -1,0 +1,17 @@
+#ftr{
+    display: table-row;
+    position: absolute;
+    width: 90%;
+    height: 30px;
+    background-color: rgb(187, 84, 84);
+    text-align: left;
+    padding-left: 50px;
+    padding-top: 10px;
+    margin: 20px;
+}
+
+footer {
+    background-color: grey;
+    display: table-row;
+    height: 0;
+}

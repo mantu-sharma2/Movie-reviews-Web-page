@@ -1,0 +1,23 @@
+<!-- <p>{{ greet }}</p> -->
+<div>
+      <div class="dropdown">
+        <button class="dropbtn">Sort 
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <button (click)="sortMovies(1)">By Name</button>
+          <button (click)="sortMovies(2)">By Upvote</button>
+          <button (click)="sortMovies(3)">By Date</button>
+          <br>
+        </div>
+      </div>
+
+</div>
+     <div class="block" *ngFor="let movie of movieslist?movieslist.movies:[]; let i = index">
+        <div>
+            <div><img src="{{movie.image}}" alt="" width="200px" height="220px"></div>
+            <div>NAME: {{movie.name}}</div>
+            <div>Director: {{movie.Director}}</div>
+            <a routerLink="details/{{movie.id}}">see more</a>
+        </div>
+    </div>

@@ -1,0 +1,16 @@
+
+<div id="dtl">
+  <div class="b1">
+  <img src="{{movie.mov1.fields.image}}" height="300px" width="320px" alt="">
+  
+  </div>
+  <div class="b2">
+    <h2 style="text-decoration: underline; color: blue;"> Movie-Name : {{movie?movie.mov1.fields.name:""}} </h2>
+  <p> Directed By : {{movie?movie.mov1.fields.Director:""}} </p>
+
+  <p> Upvotes : {{movie?movie.mov1.fields.Upvote:""}} <button (click)="upvote()">↑</button></p>
+  <p> Actor Names : {{movie?movie.mov1.fields.Main_character:""}}</p>
+  <p>Age : {{movie?movie.mov1.fields.Age:""}}</p>
+  <p>Birthplace : {{movie?movie.mov1.fields.Birthplace:""}}</p>
+  <i> Date of Release : {{movie?movie.mov1.fields.Date:""}} </i>
+  </div>
