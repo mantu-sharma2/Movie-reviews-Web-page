@@ -9,6 +9,7 @@
   <p> Directed By : {{movie?movie.mov1.fields.Director:""}} </p>
 
   <p> Upvotes : {{movie?movie.mov1.fields.Upvote:""}} <button (click)="upvote()">↑</button></p>
+  <p>Downvotes : {{movie?movie.mov1.fields.Downvote:""}} <button (click)="downvote()">↓</button></p>
   <p> Actor Names : {{movie?movie.mov1.fields.Main_character:""}}</p>
   <p>Age : {{movie?movie.mov1.fields.Age:""}}</p>
   <p>Birthplace : {{movie?movie.mov1.fields.Birthplace:""}}</p>

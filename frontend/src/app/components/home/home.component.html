@@ -1,4 +1,5 @@
-<!-- <p>{{ greet }}</p> -->
+
+<!-- for sorting button -->
 <div>
       <div class="dropdown">
         <button class="dropbtn">Sort 
@@ -7,12 +8,14 @@
         <div class="dropdown-content">
           <button (click)="sortMovies(1)">By Name</button>
           <button (click)="sortMovies(2)">By Upvote</button>
-          <button (click)="sortMovies(3)">By Date</button>
+          <button (click)="sortMovies(3)">By length of Director name</button>
           <br>
         </div>
       </div>
 
 </div>
+
+<!-- for movies list details -->
      <div class="block" *ngFor="let movie of movieslist?movieslist.movies:[]; let i = index">
         <div>
             <div><img src="{{movie.image}}" alt="" width="200px" height="220px"></div>

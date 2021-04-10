@@ -16,16 +16,20 @@ export class DetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.id = Number(this.route.snapshot.paramMap.get('id'));
-    console.log(this.id);
     this.myservice.getMovieDetails(this.id).subscribe((data) => {
-      // console.log(data);
       this.movie = data;
       
     })
   }
+  
   public upvote()  {
-    console.log("Calling Upvote")
     this.myservice.upvoteMovie(this.id).subscribe((data) => {
+      this.movie = data;
+    })
+  }
+
+  public downvote()  {
+    this.myservice.downvoteMovie(this.id).subscribe((data) => {
       this.movie = data;
     })
   }

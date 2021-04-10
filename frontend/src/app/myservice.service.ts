@@ -21,4 +21,8 @@ export class MyserviceService {
     upvoteMovie(id: number) {
         return this.http.get(this.apiurl + '/upvote/'+id)
     }
+
+    downvoteMovie(id: number){
+        return this.http.get(this.apiurl +'/downvote/'+id)
+    }
 }

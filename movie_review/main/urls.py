@@ -5,4 +5,6 @@ urlpatterns = [
     path("",views.home,name='movie_list'),
     path('details/<int:id>/',views.details,name="details"),
     path('upvote/<int:id>/',views.upvote,name="upvote"),
+    path('downvote/<int:id>',views.downvote,name='downvote')
 ]
+

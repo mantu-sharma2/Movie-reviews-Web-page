@@ -6,25 +6,22 @@ from .models import *
 
 # Create your views here.
 def home(request):
-    allMovies = movie.objects.all()
-    # print(allMovies.values())
+    allMovies = movie.objects.all()    #queryset
     data = {
         "movies": list(allMovies.values()),
     }
     return JsonResponse(data, safe=False)
-    # return render(request,'main/index.html', context)
+
 
 # detail page
 def details(request, id):
     moviess = movie.objects.get(id=id)
-    # print(moviess)
     data = serializers.serialize('json', [moviess,])
     struct = json.loads(data)
     data = {
        "mov1": struct[0],
     }
     return JsonResponse(data, safe=False)
-    # return render(request, 'main/details.html', context)
 
 # upvote 
 def upvote(request, id):
@@ -37,3 +34,14 @@ def upvote(request, id):
        "mov1": struct[0],
     }
     return JsonResponse(data, safe=False)
+
+def downvote(request,id):
+    n=movie.objects.get(id=id)
+    n.Downvote-=1
+    n.save()
+    data=serializers.serialize('json',[n,])
+    struct=json.loads(data)
+    data={
+        'mov1':struct[0]
+    }
+    return JsonResponse(data,safe=False)
